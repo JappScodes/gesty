@@ -55,11 +55,12 @@ body {
   position: absolute;
   width: 58%;
   height: 86%;
-  background-image: url(../images/hero-bg.png);
+  background-image: none;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   top: 25px;
   right: 0;
+  display: none;
 }
 
 .sub_page .hero_area {
@@ -299,12 +300,85 @@ a:focus {
 }
 
 .slider_img-box {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .slider_img-box img {
   width: 100%;
+}
+
+/* brand tagline section */
+.brand_tagline_section {
+  background: linear-gradient(135deg, #2071a3 0%, #4cb3db 100%);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.brand_tagline_section .brand_tagline-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand_tagline_section .brand_logo-container {
+  margin-bottom: 30px;
+}
+
+.brand_tagline_section .brand_logo {
+  max-width: 120px;
+  height: auto;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.brand_tagline_section .brand_logo:hover {
+  transform: scale(1.05);
+}
+
+.brand_tagline_section .brand_tagline {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.brand_tagline_section .brand_tagline span {
+  display: block;
+  color: #ffb700;
+  font-weight: 900;
+}
+
+.brand_tagline_section .brand_subtitle {
+  margin-top: 25px;
+}
+
+.brand_tagline_section .brand_subtitle p {
+  font-size: 18px;
+  color: #f9fcfb;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* brand tagline section responsive */
+@media (max-width: 768px) {
+  .brand_tagline_section {
+    padding: 40px 0;
+  }
+
+  .brand_tagline_section .brand_logo {
+    max-width: 100px;
+  }
+
+  .brand_tagline_section .brand_tagline {
+    font-size: 28px;
+  }
+
+  .brand_tagline_section .brand_subtitle p {
+    font-size: 16px;
+  }
 }
 
 .welcome_section {
@@ -851,6 +925,54 @@ a:focus {
 }
 
 /* end info section */
+
+/* payments section */
+.payments_section {
+  background-color: #f9f9f9;
+  border-top: 3px solid #4cb3db;
+}
+
+.payments_section h3 {
+  color: #2071a3;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.payments_img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.payments_img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(32, 113, 163, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.payments_img-box img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .payments_section {
+    padding: 30px 0 !important;
+  }
+
+  .payments_section h3 {
+    font-size: 24px;
+  }
+
+  .payments_img-box {
+    max-width: 100%;
+  }
+}
+
+/* end payments section */
 /* footer section*/
 .footer_section {
   font-weight: 500;
@@ -895,6 +1017,11 @@ a:focus {
   /* Mostrar el menú cuando está expandido */
   .custom_nav-container .navbar-collapse.show {
     max-height: 100%;
+  }
+
+  /* Reducir imagen portadapng.png en dispositivos móviles */
+  .slider_img-box {
+    width: 32%;
   }
 }
 
